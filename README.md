@@ -26,3 +26,7 @@ Follow [Nomadcoders-Apollo-Intro](https://academy.nomadcoders.co/p/build-a-movie
 Follow [Ant](https://ant.design/docs/react/introduce) Tutorial
 [Tree](https://ant.design/components/tree/#components-tree-demo-dynamic)
 > `ant-test` Directory
+
+### Oracle Connection
+Using [oracle-node](https://www.techiediaries.com/node-oracle-database-crud/)
+> `oracle-test` Directory
