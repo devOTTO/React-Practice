@@ -1,10 +1,12 @@
-type Person {
-    name: String!
-    age: Int!
-    gender: String!
+type Movie {
+    id: Int!
+    title: String!
+    rating: Float!
+    summary: String!
+    language: String!
+    medium_cover_image: String!
 }
 
 type Query {
-    people: [Person]!
-    person(potato: Int!) : Person
+    movies(limit: Int, rating: Float): [Movie]!
 }
