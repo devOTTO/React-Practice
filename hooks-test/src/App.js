@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+const App = () => {
+  const [count, setCount] = useState(0)
+  const [email, setEmail] = useState("")
+  const updateEmail = e => {
+    const {target: {value}} = e
+    setEmail(value)
   }
+  return (
+    <span>
+    {count}
+    <button onClick={() => setCount(count+1)}>Increment</button>
+    <button onClick={() => setCount(count-1)}>Decrement</button>
+    <input placeholder="Email" value={email} onChange={updateEmail}/>
+    </span>
+  )
 }
 
 export default App;
