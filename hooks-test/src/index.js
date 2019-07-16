@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Counter from './Counter'
+import Info from './Info'
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Info />,
   document.getElementById('root')
 );

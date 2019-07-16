@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "antd/dist/antd.css";
 import { Tree } from "antd";
+import MyTreeNode from "./MyTreeNode"
 
 const { TreeNode, DirectoryTree } = Tree;
 
@@ -46,16 +47,8 @@ export default class SearchTree extends Component {
         onCheck={this.onCheck}
         checkedKeys={this.state.checkedKeys}
         >
-        <TreeNode title="parent 0" key="0-0">
-          <TreeNode title="leaf 0-0" key="0-0-0" isLeaf /> 
-          <TreeNode title="leaf 0-1" key="0-0-1" isLeaf />
-        </TreeNode>
-        <TreeNode title="parent 1" key="0-1">
-          <TreeNode title="parent 2" key="0-">
-            <TreeNode title="leaf 1-0" key="0-1-0" isLeaf />
-            <TreeNode title="leaf 1-1" key="0-1-1" isLeaf />
-          </TreeNode>
-        </TreeNode>
+          <TreeNode key='2' title = '2'/>
+          <MyTreeNode key='1' title='1' isLeaf='True'/>
       </DirectoryTree>
     );
   }
