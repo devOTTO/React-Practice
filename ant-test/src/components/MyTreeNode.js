@@ -1,12 +1,20 @@
 import React, {Component} from "react";
 import "antd/dist/antd.css";
-import { Tree } from "antd";
+import { Tree, Button} from "antd";
 
 const { TreeNode, DirectoryTree } = Tree;
 
 const MyTreeNode = (props) => {
+
+  const onClick = (v) => {
+    console.log(v)
+    v.stopPropagation()
+  }
     return (
-      <TreeNode title = {props.title} key={props.key} isLeaf={props.isLeaf} />
+      <span>
+        <span>{props.title}</span>
+        <Button onClick = {onClick} />
+      </span>
     )
 }
 
